@@ -4,15 +4,12 @@ public:
         int n  = nums.size();
         int count = 0 ;
         for(int  i= 0 ; i < n ;i ++){
-            if(nums[i] %3 != 0){
-                int sum  = nums[i];
-                int sub = nums[i];
-                while(sum %3!=0 && sub%3!=0){
-                    sum+=1;
-                    sub-=1;
-                    count++;
+                int rem = nums[i]%3;
+                if(rem == 1){ // subtract 1
+                    count+=1;
+                }else if(rem ==2){ // add 1
+                    count+=1;
                 }
-            }
         }
         return count;
     }
